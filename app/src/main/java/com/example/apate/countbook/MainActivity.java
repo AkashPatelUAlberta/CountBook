@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.view.View;
 import java.util.ArrayList;
@@ -16,13 +17,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button addCounterBtn = (Button) findViewById(R.id.add_counter_btn);
+
         ArrayAdapter<Counter> adapter = new ArrayAdapter<Counter>(this,R.layout.activity_listview,counters);
         ListView listView = (ListView) findViewById(R.id.counters_list);
         listView.setAdapter(adapter);
-    }
 
-    public void addCounter(View view) {
-        Intent intent = new Intent(this, AddCounterActivity.class);
-        startActivity(intent);
+        addCounterBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddCounterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

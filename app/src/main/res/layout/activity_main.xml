@@ -40,7 +40,6 @@
             android:id="@+id/add_counter_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="addCounter"
             android:text="@string/button_addCounter"
             android:layout_weight="3"
             />
