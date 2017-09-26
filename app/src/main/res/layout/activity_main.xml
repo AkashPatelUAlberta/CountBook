@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:onClick="addCounter"
             android:text="@string/button_addCounter"
-            android:layout_weight="5"
+            android:layout_weight="2"
             />
 
 
