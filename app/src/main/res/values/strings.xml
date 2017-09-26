@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CountBook</string>
+    <string name="app_name">akpatel-CountBook</string>
+    <string name="button_addCounter">Add Counter</string>
 </resources>
