@@ -1,5 +1,6 @@
 package com.example.apate.countbook;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -38,12 +39,8 @@ public class Counter {
         this.name = name;
     }
 
-    public Date getDate() {
-        return this.date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public String getDate() {
+        return new SimpleDateFormat("yyyy-MM-dd").format(new Date());
     }
 
     public int getInitial_val() {

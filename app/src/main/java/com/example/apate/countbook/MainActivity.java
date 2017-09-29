@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         addCounterBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AddCounterActivity.class);
+                intent.putExtra("counterList", counters);
                 startActivity(intent);
             }
         });
