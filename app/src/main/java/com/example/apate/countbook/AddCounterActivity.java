@@ -23,7 +23,7 @@ public class AddCounterActivity extends AppCompatActivity {
     private EditText comment;
 
     Bundle bundle = getIntent().getExtras();
-    ArrayList<Counter> counterList = bundle.getIntegerArrayList("counterList");
+    ArrayList<Counter> counterList = (ArrayList<Counter>) bundle.getSerializable("counterList");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,10 +69,10 @@ public class AddCounterActivity extends AppCompatActivity {
                             Integer.valueOf(currentValue.getText().toString()),
                             Integer.valueOf(initialValue.getText().toString()),
                             comment.getText().toString());
+                    counterList.add(counter);
                     Intent intent = new Intent(AddCounterActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
-
 
             }
         });
