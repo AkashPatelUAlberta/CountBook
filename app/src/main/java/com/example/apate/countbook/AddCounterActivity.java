@@ -175,7 +175,5 @@ public class AddCounterActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }

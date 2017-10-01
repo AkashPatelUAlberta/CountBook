@@ -41,8 +41,6 @@ public class CounterAdapter extends ArrayAdapter<Counter> implements View.OnClic
         this.mContext = mContext;
     }
 
-
-
     @Override
     public void onClick(View v) {
         int position = (Integer) v.getTag();
@@ -101,8 +99,6 @@ public class CounterAdapter extends ArrayAdapter<Counter> implements View.OnClic
         viewHolder.txtName.setText(counter.getName());
         viewHolder.txtDate.setText(counter.getDate().toString());
         viewHolder.txtValue.setText(Integer.toString(counter.getCurrent_val()));
-
-
 
         return convertView;
     }
