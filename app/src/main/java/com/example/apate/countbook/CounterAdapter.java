@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +25,6 @@ import java.util.StringTokenizer;
  */
 
 public class CounterAdapter extends ArrayAdapter<Counter> implements View.OnClickListener{
-
-    private ArrayList<Counter> counters;
     Context mContext;
 
     // View lookup cache
@@ -39,9 +38,10 @@ public class CounterAdapter extends ArrayAdapter<Counter> implements View.OnClic
 
     public CounterAdapter(ArrayList<Counter> counters, Context mContext) {
         super(mContext, R.layout.activity_listview, counters);
-        this.counters = counters;
         this.mContext = mContext;
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -54,8 +54,8 @@ public class CounterAdapter extends ArrayAdapter<Counter> implements View.OnClic
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Counter counter = getItem(position);
-        ViewHolder viewHolder;
+        final Counter counter = getItem(position);
+        final ViewHolder viewHolder;
         final View result;
 
         if (convertView == null) {
@@ -74,9 +74,35 @@ public class CounterAdapter extends ArrayAdapter<Counter> implements View.OnClic
             result=convertView;
         }
 
+        viewHolder.increment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                counter.increment();
+                counter.updateDate();
+                CounterList.save(view.getContext());
+                viewHolder.txtName.setText(counter.getName());
+                viewHolder.txtDate.setText(counter.getDate().toString());
+                viewHolder.txtValue.setText(Integer.toString(counter.getCurrent_val()));
+            }
+        });
+
+        viewHolder.decrement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                counter.decrement();
+                counter.updateDate();
+                CounterList.save(view.getContext());
+                viewHolder.txtName.setText(counter.getName());
+                viewHolder.txtDate.setText(counter.getDate().toString());
+                viewHolder.txtValue.setText(Integer.toString(counter.getCurrent_val()));
+            }
+        });
+
         viewHolder.txtName.setText(counter.getName());
         viewHolder.txtDate.setText(counter.getDate().toString());
         viewHolder.txtValue.setText(Integer.toString(counter.getCurrent_val()));
+
+
 
         return convertView;
     }

@@ -1,5 +1,7 @@
 package com.example.apate.countbook;
 
+import android.util.Log;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -39,8 +41,10 @@ public class Counter {
         this.name = name;
     }
 
+    public void updateDate() {this.date = new Date();}
+
     public String getDate() {
-        return new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        return new SimpleDateFormat("yyyy-MM-dd").format(this.date);
     }
 
     public int getInitial_val() {
@@ -51,19 +55,16 @@ public class Counter {
         this.initial_val = initial_val;
     }
 
-    public String getComment() {
-        return this.comment;
-    }
+    public String getComment() {return this.comment;}
 
     public void setComment(String comment) {
         this.comment = comment;
     }
 
-    public void increment() {
-        this.current_val++;
-    }
+    public void increment() {this.current_val++;}
 
     public void decrement() {
-        this.current_val--;
+        if (this.current_val > 0)
+            this.current_val--;
     }
 }
