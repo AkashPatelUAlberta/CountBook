@@ -5,6 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    style="@style/AppTheme"
     tools:context="com.example.apate.countbook.MainActivity">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="List of Counters:"
+            android:textColor="@color/textMain"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -47,15 +50,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/button_addCounter"
+                android:background="@drawable/my_btn_bg"
                 android:layout_weight="2"
                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textMain"
+                android:layout_weight="12"/>
+
 
             <TextView
                 android:id="@+id/numOfCounters"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textMain"
                 android:text="Counter: "
-                android:layout_weight="23"/>
+                android:layout_weight="10"/>
 
         </LinearLayout>
     </LinearLayout>

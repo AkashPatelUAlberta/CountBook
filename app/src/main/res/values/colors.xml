@@ -3,4 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="background">#181818</color>
+    <color name="btnBackground">#18181F</color>
+    <color name="textMain">#F7FF00</color>
+    <color name="anotherText">#00ECFF</color>
+    <color name="plus">#FF0000</color>
+    <color name="minus">#FB00FF</color>
+
+
 </resources>
