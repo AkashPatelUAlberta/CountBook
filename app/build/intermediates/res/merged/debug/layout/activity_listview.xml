@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Look at this fancy name"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/anotherText" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="February 32, 1923"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/anotherText"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/increment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/plusbtn"
+        android:text="+"
+        android:textColor="@color/plus"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/decrement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/increment"
+        android:layout_toStartOf="@+id/increment"
+        android:background="@drawable/minusbtn"
+        android:text="-"
+        android:textColor="@color/minus"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/counterValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/date"
+        android:layout_alignBottom="@+id/date"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_toLeftOf="@+id/decrement"
+        android:text="100"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/anotherText"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.example.apate.countbook.AddCounterActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Counter Name:"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textMain"
+            />
+
+        <EditText
+            android:id="@+id/counterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/textMain"
+            android:hint="Insert Name"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initial Value:"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textMain"
+            />
+
+        <EditText
+            android:id="@+id/initialValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="150dp"
+            android:textColor="@color/textMain"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:hint="Insert Value"
+            android:layout_weight="0.51" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Value:"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textMain"
+            android:layout_weight="0.75" />
+
+        <EditText
+            android:id="@+id/currentValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.02"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:hint="Insert Value"
+            android:textColor="@color/textMain"
+            />
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:background="@drawable/plusbtn"
+            android:textColor="@color/plus"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:background="@drawable/minusbtn"
+            android:textColor="@color/minus"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Last Modified:"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textMain"
+            />
+
+        <TextView
+            android:id="@+id/menuDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="150dp"
+            android:textColor="@color/textMain"
+            android:textAlignment="center"
+            android:text="Counter not saved."
+            android:layout_weight="0.51" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment:"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textMain"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textMain"
+            android:hint="Insert Comment..."
+            android:maxLines="10"
+            android:lines="10"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:text="Save"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_btn_bg"
+            android:layout_weight="2"/>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:text="Reset"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otherbtns"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:text="Delete"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otherbtns"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
